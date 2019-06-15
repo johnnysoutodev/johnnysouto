@@ -1,0 +1,32 @@
+{
+  "name": "johnnysouto",
+  "version": "1.0.0",
+  "description": "Site de portifolio do Johnny Souto",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnnysoutodev/johnnysouto.git"
+  },
+  "keywords": [
+    "Johnny",
+    "Souto",
+    "Portifolio",
+    "Web",
+    "Desenvolvedor",
+    "Front-end",
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "EcmaScript",
+    "ES6"
+  ],
+  "author": "Johnny Souto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnnysoutodev/johnnysouto/issues"
+  },
+  "homepage": "https://github.com/johnnysoutodev/johnnysouto#readme"
+}
