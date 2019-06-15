@@ -31,5 +31,8 @@
   "homepage": "https://github.com/johnnysoutodev/johnnysouto#readme",
   "devDependencies": {
     "grunt": "^1.0.4"
+  },
+  "dependencies": {
+    "chokidar": "^3.0.1"
   }
 }
