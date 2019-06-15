@@ -33,6 +33,7 @@
     "grunt": "^1.0.4"
   },
   "dependencies": {
-    "chokidar": "^3.0.1"
+    "chokidar": "^3.0.1",
+    "grunt-contrib-watch-chokidar": "^1.0.0"
   }
 }
