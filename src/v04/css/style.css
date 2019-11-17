@@ -1,3 +1,7 @@
 h1, h2, h3, p, a, ul, li{
   font-size: 24px;
 }
+
+@media print{
+  
+}
