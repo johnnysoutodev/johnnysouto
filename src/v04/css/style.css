@@ -16,6 +16,10 @@ section ul{
   margin: 10px 0 0 20px;
 }
 
+section ul li{
+  margin: 5px 0 5px 10px;
+}
+
 h1, h2{
   font-weight: 700;
 }
@@ -61,6 +65,10 @@ a:hover{
 
 .habilidade{
 
+}
+
+.habilidade li{
+  list-style: square;
 }
 
 .formacao{
