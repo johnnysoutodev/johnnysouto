@@ -8,6 +8,10 @@ section{
   border: 0;
 }
 
+section ul{
+  margin: 10px 0 0 20px;
+}
+
 h1, h2{
   font-weight: 700;
 }
@@ -29,6 +33,14 @@ h3{
 
 a{
   text-decoration: none;
+  color: #000;
+}
+a:visited{
+  color: #000;
+}
+
+a:hover{
+  color: #000;
 }
 
 .contato{
