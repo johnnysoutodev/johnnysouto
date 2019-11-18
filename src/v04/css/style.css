@@ -2,20 +2,29 @@ body{
   font-family: Arial, sans-serif;
 }
 
+section{
+  margin: 15px;
+  padding: 0;
+  border: 0;
+}
+
 h1, h2{
   font-weight: 700;
 }
 
 h1{
   font-size: 1.5rem;
+  margin: 10px;
 }
 
 h2{
   font-size: 1.3rem;
+  margin: 8px;
 }
 
 h3{
   font-size: 1.1rem;
+  margin: 5px;
 }
 
 a{
