@@ -1,3 +1,7 @@
+@media screen {
+  
+}
+
 body{
   font-family: Arial, sans-serif;
 }
@@ -43,13 +47,42 @@ a:hover{
   color: #000;
 }
 
-.contato{
-  margin: 10px 15px;
+.titulo{
+
 }
 
-.contato h3{
-  margin: 0 0 0 15px;
+.contato{
+
 }
+
+.objetivo{
+
+}
+
+.habilidade{
+
+}
+
+.formacao{
+
+}
+
+.idioma{
+
+}
+
+.historico{
+
+}
+
+.curso{
+
+}
+
+.asterisco{
+
+}
+
 
 @media print{
 
