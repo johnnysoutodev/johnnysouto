@@ -20,10 +20,6 @@ section ul li{
   margin: 5px 0 5px 10px;
 }
 
-section span{
-  margin: 5px 0;
-}
-
 h1, h2, strong{
   font-weight: 700;
 }
@@ -71,22 +67,26 @@ a:hover{
 
 }
 
+
 .habilidade li, .historico li{
   list-style: square;
 }
 
 .formacao{
-
+  
 }
 
 .idioma{
-
+  
 }
 
 .historico{
-
+  
 }
 
+article ul span{
+  margin: 5px 0;
+}
 .curso{
 
 }
