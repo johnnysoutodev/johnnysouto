@@ -2,23 +2,32 @@ body{
   font-family: Arial, sans-serif;
 }
 
+h1, h2{
+  font-weight: 700;
+}
+
 h1{
   font-size: 1.5rem;
-  font-weight: 700;
 }
 
 h2{
   font-size: 1.3rem;
-  font-weight: 500;;
 }
 
 h3{
   font-size: 1.1rem;
-  font-weight: 300;
+}
+
+a{
+  text-decoration: none;
 }
 
 .contato{
   margin: 10px 15px;
+}
+
+.contato h3{
+  margin: 0 0 0 15px;
 }
 
 @media print{
