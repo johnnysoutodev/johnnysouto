@@ -20,6 +20,10 @@ section ul li{
   margin: 5px 0 5px 10px;
 }
 
+span{
+  margin: 5px 0 5px 10px;
+}
+
 h1, h2, strong{
   font-weight: 700;
 }
@@ -84,9 +88,6 @@ a:hover{
   
 }
 
-article ul span{
-  margin: 5px 0;
-}
 .curso{
 
 }
@@ -94,7 +95,6 @@ article ul span{
 .asterisco{
 
 }
-
 
 @media print{
 
