@@ -20,7 +20,11 @@ section ul li{
   margin: 5px 0 5px 10px;
 }
 
-h1, h2{
+section span{
+  margin: 5px 0;
+}
+
+h1, h2, strong{
   font-weight: 700;
 }
 
