@@ -67,7 +67,7 @@ a:hover{
 
 }
 
-.habilidade li{
+.habilidade li, .historico li{
   list-style: square;
 }
 
