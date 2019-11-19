@@ -28,19 +28,32 @@ h1, h2, strong{
   font-weight: 700;
 }
 
+h1, h2, h3, h4, h5, h6{
+  margin: 5px;
+}
+
 h1{
   font-size: 1.5rem;
-  margin: 10px;
 }
 
 h2{
   font-size: 1.3rem;
-  margin: 8px;
 }
 
 h3{
   font-size: 1.1rem;
-  margin: 5px;
+}
+
+h4{
+  font-size: 1rem;
+}
+
+h5{
+  font-size: 0.8rem;
+}
+
+h6{
+  font-size: 0.6rem;
 }
 
 a{
