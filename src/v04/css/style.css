@@ -1,24 +1,19 @@
 @media screen {
   
+  
 }
 
 body{
   font-family: Arial, sans-serif;
-  font-size: 15px;
-  line-height: 18px;
+  font-size: 12px;
+  line-height: 14px;
   padding: 0;
   border: 0;
 }
 
-#container{
-  width:768px;
-  height: 1024px;
-  display: block;
-  background-color: #7e827f;
-}
 
 section{
-  margin: 15px;
+  /* margin: 15px; */
 }
 
 section ul{
@@ -45,7 +40,7 @@ h1, h2, h3, h4, h5, h6{
   margin: 5px;
 }
 
-h1{
+/* h1{
   font-size: 1.6rem;
 }
 
@@ -67,7 +62,7 @@ h5{
 
 h6{
   font-size: 0.6rem;
-}
+} */
 
 a{
   text-decoration: none;
@@ -130,13 +125,25 @@ a:hover{
 }
 
 @media print{ 
+  #container{
+    width:900px;
+    height: 1330px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+    background-color: #7e827f;
+    vertical-align: middle;
+    align-content: center;
+    align-items: center;
+  }
 
-header{
-  display: none;
-}
+  header{
+    display: none;
+  }
 
-footer{
-  display: none;
-}
+  footer{
+    display: none;
+  }
 
 }
