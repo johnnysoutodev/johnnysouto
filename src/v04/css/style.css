@@ -10,6 +10,13 @@ body{
   border: 0;
 }
 
+#container{
+  width:768px;
+  height: 1024px;
+  display: block;
+  background-color: #7e827f;
+}
+
 section{
   margin: 15px;
 }
