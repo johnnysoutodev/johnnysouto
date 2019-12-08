@@ -65,34 +65,34 @@ a:visited{
 a:hover{
   color: #000;
 }
-.titulo{
+#titulo{
 
 }
-.titulo button{
+#titulo button{
   display: none;
 }
-.contato{
+#contato{
 
 }
-.objetivo{
+#objetivo{
 
 }
-.habilidade{
+#habilidade{
 
 }
 .habilidade li, .historico li{
   list-style: square;
 }
-.formacao{
+#formacao{
   
 }
-.idioma{
+#idioma{
   
 }
-.historico{
+#historico{
   
 }
-.curso{
+#curso{
 
 }
 .curso ul li{
