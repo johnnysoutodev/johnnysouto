@@ -101,7 +101,13 @@ a:hover{
 .asterisco{
   font-size: 8px;
 }
-@media print{ 
+@media print{
+  header{
+    display: none;
+  }
+  footer{
+    display: none;
+  }
   #container{
     width:900px;
     height: 1330px;
@@ -113,11 +119,5 @@ a:hover{
     vertical-align: middle;
     align-content: center;
     align-items: center;
-  }
-  header{
-    display: none;
-  }
-  footer{
-    display: none;
   }
 }
