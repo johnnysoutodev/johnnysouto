@@ -2,7 +2,6 @@
   
   
 }
-
 body{
   font-family: Arial, sans-serif;
   font-size: 12px;
@@ -10,32 +9,24 @@ body{
   padding: 0;
   border: 0;
 }
-
-
 section{
   /* margin: 15px; */
 }
-
 section ul{
   margin: 10px 0 0 20px;
 }
-
 section ul li{
   margin: 5px 0 5px 25px;
 }
-
 section li{
   /* font-size: 16px; */
 }
-
 section span{
   margin: 5px 0 5px 10px;
 }
-
 h1, h2, strong{
   font-weight: 700;
 }
-
 h1, h2, h3, h4, h5, h6{
   margin: 5px;
 }
@@ -71,59 +62,45 @@ a{
 a:visited{
   color: #000;
 }
-
 a:hover{
   color: #000;
 }
-
 .titulo{
 
 }
-
 .titulo button{
   display: none;
 }
-
 .contato{
 
 }
-
 .objetivo{
 
 }
-
 .habilidade{
 
 }
-
 .habilidade li, .historico li{
   list-style: square;
 }
-
 .formacao{
   
 }
-
 .idioma{
   
 }
-
 .historico{
   
 }
-
 .curso{
 
 }
-
 .curso ul li{
   /* font-size: 12px; */
 }
-
 .asterisco{
   font-size: 8px;
 }
-
 @media print{ 
   #container{
     width:900px;
@@ -137,13 +114,10 @@ a:hover{
     align-content: center;
     align-items: center;
   }
-
   header{
     display: none;
   }
-
   footer{
     display: none;
   }
-
 }
