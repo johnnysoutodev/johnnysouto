@@ -1,8 +1,36 @@
 /* style.css */
-body{
+body, html{
     height: 100%;
     margin: 0;
     font-size: 16px;
     font-family: 'Lato', sans-serif;
+    line-height: 1em;
+    color: #fff;
+}
+.head, .body, .foot{
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+.head{
+    background-image: url('../images/person_header.jpeg');
+    min-height: 100%;
+}
+.body{
+    background-image: url('../images/person_body.jpeg');
+    min-height: 100%;
+}
+.foot{
+    background-image: url('../images/person_footer.jpeg');
+    min-height: 100%;
+}
+.bg-light{
+    background-color: #fff;
+    color: #000;
+}
+.bg-dark{
+    background-color: #000;
     color: #fff;
 }
