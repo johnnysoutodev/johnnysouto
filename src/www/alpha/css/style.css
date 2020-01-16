@@ -12,7 +12,7 @@ body, html{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: scroll;
+    background-attachment: fixed;
 }
 .head{
     background-image: url('../images/person_header.jpeg');
@@ -20,7 +20,7 @@ body, html{
 }
 .body{
     background-image: url('../images/person_body.jpeg');
-    min-height: 100%;
+    min-height: 400px;
 }
 .foot{
     background-image: url('../images/person_footer.jpeg');
@@ -33,4 +33,14 @@ body, html{
 .bg-dark{
     background-color: #000;
     color: #fff;
+}
+.center{
+    position: absolute;
+    text-align: center;
+}
+.middle{
+    vertical-align: middle;
+}
+.tamanho-exemplo{
+    min-height: 640px;
 }
