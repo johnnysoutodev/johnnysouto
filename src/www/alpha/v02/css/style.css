@@ -7,3 +7,9 @@ body, html{
     line-height: 1em;
     color: #fff;
 }
+.bg-main{
+    background: url('../images/bg_person.jpg') no-repeat;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 0;
+}
