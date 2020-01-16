@@ -12,11 +12,11 @@ body, html{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: scroll;
+    background-attachment: fixed;
 }
 .head{
-    background-image: url('../images/person_header.jpeg');
-    min-height: 400px;
+    background-image: url('../images/person_head.jpeg');
+    min-height: 100%;
 }
 .head-content{
     position: absolute;
@@ -31,7 +31,7 @@ body, html{
     min-height: 400px;
 }
 .foot{
-    background-image: url('../images/person_footer.jpeg');
+    background-image: url('../images/person_foot.jpeg');
     min-height: 400px;
 }
 .bg-light{
@@ -53,11 +53,5 @@ body, html{
     min-height: 540px;
 }
 footer{
-    /* min-height: 400px; */
-}
-.altura-100{
-    height: 100%;
-}
-.bg-light-dark{
-    background-image: linear-gradient(to bottom, url('../images/bg-transparent.png') 50%, #000);
+    min-height: 200px;
 }
