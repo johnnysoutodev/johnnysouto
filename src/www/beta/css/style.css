@@ -4,16 +4,14 @@ body{
     padding: 0;
     border: 0;
     font-size: 16px;
+    line-height: 18px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-section h2{
-    /* display: none; */
 }
 a{
     text-decoration: none;
 }
-#title-2, #title-3{
-    display: none;
+ul{
+    margin-left: 35px;
 }
 li{
     list-style: none;
@@ -22,6 +20,12 @@ li{
 #historic li{
     list-style-type: disc;
 }
+div.exp{
+    margin-left: 35px;
+}
 #head button{
+    display: none;
+}
+.oculto{
     display: none;
 }
