@@ -6,3 +6,16 @@ body{
     font-size: 16px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+a{
+    text-decoration: none;
+}
+#title-2, #title-3{
+    display: none;
+}
+li{
+    list-style: none;
+}
+#skills li,
+#historic li{
+    list-style-type: disc;
+}
