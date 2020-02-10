@@ -13,3 +13,9 @@ a{
 li{
     list-style: none;
 }
+@media print{
+    #skills li,
+    #historic li{
+        list-style-type: disc;
+    }
+}
