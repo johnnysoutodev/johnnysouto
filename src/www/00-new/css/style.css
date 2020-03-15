@@ -1,0 +1,40 @@
+/* style.css */
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 16px;
+    line-height: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    margin-left: 35px;
+}
+
+li{
+    list-style: none;
+}
+
+#skills li,
+#historic li{
+    list-style-type: disc;
+}
+
+div.exp{
+    margin-left: 35px;
+}
+
+.card{
+    background-color: #fff;
+    padding: 2em;
+    box-shadow: 4px 4px 15px rgba(0,0,0,.5);
+}
+
+.oculto{
+    display: none;
+}
