@@ -4,8 +4,17 @@ body{
     padding: 0;
     border: 0;
     font-size: 16px;
-    line-height: 18px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 20px;
+    font-family: 'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif;
+}
+
+h1{
+    font-size: 2em;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: 500;
+    line-height: 1.2em;
 }
 
 a{
@@ -13,11 +22,15 @@ a{
 }
 
 ul{
-    margin-left: 35px;
+    margin-left: 2em;
 }
 
 li{
     list-style: none;
+}
+
+section{
+    
 }
 
 #skills li,
@@ -26,15 +39,29 @@ li{
 }
 
 div.exp{
-    margin-left: 35px;
+    margin-left: 2em;
+}
+
+.container{
+    margin: 10px auto;
 }
 
 .card{
     background-color: #fff;
-    padding: 2em;
     box-shadow: 4px 4px 15px rgba(0,0,0,.5);
+}
+
+.row{
+    width: 100%;
+    position: relative;
 }
 
 .oculto{
     display: none;
+}
+
+@media only screen and (max-width: 320px) and (orientation: portrait){
+    .container{
+        max-width: 95%;
+    }
 }
