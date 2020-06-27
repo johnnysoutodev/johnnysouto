@@ -18,6 +18,21 @@ module.exports = function(grunt){
                 src: ['src/www/current/css/*.css'],
                 dest: 'src/www/current/style.css'
             }
+        },
+
+        less: {
+            dist: {
+                src: 'src/www/current/less/*.less',
+                dest: 'dist/www/css/style.min.css'
+            }
+        },
+
+        copy: {
+            main: {
+                expand: false,
+                src: 'src/www/*.html',
+                dest: 'dist/www/*.html'
+            }
         }
 
     });
