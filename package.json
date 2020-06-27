@@ -29,7 +29,9 @@
     "url": "https://github.com/johnnysoutodev/johnnysouto/issues"
   },
   "homepage": "https://github.com/johnnysoutodev/johnnysouto#readme",
-  "devDependencies": {},
+  "devDependencies": {
+    "grunt-contrib-clean": "^2.0.0"
+  },
   "dependencies": {
     "grunt": "^1.1.0"
   }
