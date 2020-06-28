@@ -72,6 +72,40 @@ module.exports = function(grunt){
             }
         },
 
+        watch: {
+            scripts: {
+                files: 'src/www/current/js/*.js',
+                tasks: ['codificando'],
+                options: {
+                    event: ['added', 'ghanged']
+                }
+            },
+
+            styles: {
+                files: 'src/www/current/css/*.css',
+                tasks: ['estilizando'],
+                options: {
+                    event: ['added', 'changed']
+                }
+            },
+
+            html: {
+                files: 'src/www/current/*.html',
+                tasks: ['copy:html'],
+                options: {
+                    event: ['added', 'changed']
+                }
+            },
+
+            images: {
+                files: 'src/www/current/images/*.{png,jpg,gif,svg}',
+                tasks: ['compactando-imagens'],
+                options: {
+                    event: ['added', 'changed']
+                }
+            }
+        },
+
         uglify: {
             js: {
                 files: [{
