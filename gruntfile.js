@@ -61,10 +61,10 @@ module.exports = function(grunt){
         },
 
         uglify: {
-            dist: {
+            js: {
                 files: [{
-                    src: 'dist/www/js/scripts.min.js',
-                    dest: 'dist/www/js/scripts.min.js'
+                    src: '.tmp/js/scripts.min.js',
+                    dest: '.tmp/js/scripts.min.js'
                 }]
             }
         },
