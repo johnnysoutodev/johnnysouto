@@ -12,8 +12,8 @@ module.exports = function(grunt){
                 src: ['.tmp/**/*']
             },
 
-            index: {
-                src: ['dist/www/index.html']
+            html: {
+                src: ['dist/www/*.html']
             },
 
             imagesTmp: {
@@ -45,10 +45,29 @@ module.exports = function(grunt){
         },
 
         copy: {
-            main: {
+            html: {
                 expand: false,
                 src: 'src/www/*.html',
                 dest: 'dist/www/*.html'
+            },
+
+            css: {
+                expand: false,
+                src: '.tmp/css/styles.min.css',
+                dest: 'dist/www/css/styles.min.css'
+            },
+
+            js: {
+                expande: false,
+                src: './tmp/js/scripts.min.js',
+                dest: 'dist/www/js/scripts.min.js'
+            },
+
+            images: {
+                expand: true,
+                cwd: '.tmp/images',
+                src: '*.{png,jpg,gif,svg}',
+                dest: 'dist/www/images/'
             }
         },
 
@@ -75,7 +94,7 @@ module.exports = function(grunt){
                     expand: true,
                     cwd: 'src/www/current/images',
                     src: ['**/*.{png,jpg,gif,svg'],
-                    dest: '.tmp/images'
+                    dest: 'dist/www/images'
                 }]
             }
         }
