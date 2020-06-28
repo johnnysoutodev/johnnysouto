@@ -127,4 +127,13 @@ module.exports = function(grunt){
         }
 
     });
+
+    // Carregando os plug-ins
+    grunt.loadNpmTasks('gurnt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt-loadNpmTasks('grunt-contrib-watch');
+    grunt-loadNpmTasks('grunt-image');
 }
