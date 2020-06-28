@@ -37,13 +37,6 @@ module.exports = function(grunt){
             }
         },
 
-        less: {
-            dist: {
-                src: 'src/www/current/less/*.less',
-                dest: 'dist/www/css/style.min.css'
-            }
-        },
-
         copy: {
             html: {
                 expand: false,
