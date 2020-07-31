@@ -5,7 +5,7 @@ module.exports = function(grunt){
 
         clean: {
             dist:{
-                src: ['dist/www/**/*']
+                src: ['dist/**/*']
             },
 
             tmp: {
@@ -13,7 +13,7 @@ module.exports = function(grunt){
             },
 
             base: {
-                src: ['dist/www/*.html','dist/www/*.htm','dist/www/*.txt']
+                src: ['dist/*.html','dist/*.txt']
             },
 
             imagesTmp: {
@@ -21,14 +21,14 @@ module.exports = function(grunt){
             },
 
             images: {
-                src: ['dist/app/images/**/*']
+                src: ['dist/images/**/*']
             }
         },
 
         concat: {
             js: {
-                src: ['src/www/current/js/jquery.js', 'src/www/current/js/main.js'],
-                dest: 'dist/www/js/scripts.min.js'
+                src: ['src/current/js/jquery.js', 'src/current/js/main.js'],
+                dest: 'dist/js/scripts.min.js'
             },
 
             css: {
@@ -38,29 +38,30 @@ module.exports = function(grunt){
         },
 
         copy: {
-            html: {
+            base: {
                 expand: false,
-                src: 'src/www/*.html',
-                dest: 'dist/www/*.html'
+                cwd: 'src',
+                src: '*.{html,txt}',
+                dest: 'dist/'
             },
 
             css: {
                 expand: false,
                 src: '.tmp/css/styles.min.css',
-                dest: 'dist/www/css/styles.min.css'
+                dest: 'dist/css/styles.min.css'
             },
 
             js: {
                 expande: false,
                 src: './tmp/js/scripts.min.js',
-                dest: 'dist/www/js/scripts.min.js'
+                dest: 'dist/js/scripts.min.js'
             },
 
             images: {
                 expand: true,
                 cwd: '.tmp/images',
                 src: '*.{png,jpg,gif,svg}',
-                dest: 'dist/www/images/'
+                dest: 'dist/images/'
             }
         },
 
@@ -74,7 +75,7 @@ module.exports = function(grunt){
 
         watch: {
             scripts: {
-                files: 'src/www/current/js/*.js',
+                files: 'src/js/*.js',
                 tasks: ['codificando'],
                 options: {
                     event: ['added', 'ghanged']
@@ -82,7 +83,7 @@ module.exports = function(grunt){
             },
 
             styles: {
-                files: 'src/www/current/css/*.css',
+                files: 'src/css/*.css',
                 tasks: ['estilizando'],
                 options: {
                     event: ['added', 'changed']
@@ -90,7 +91,7 @@ module.exports = function(grunt){
             },
 
             html: {
-                files: 'src/www/current/*.html',
+                files: 'src/*.html',
                 tasks: ['copy:html'],
                 options: {
                     event: ['added', 'changed']
@@ -98,7 +99,7 @@ module.exports = function(grunt){
             },
 
             images: {
-                files: 'src/www/current/images/*.{png,jpg,gif,svg}',
+                files: 'src/images/*.{png,jpg,gif,svg}',
                 tasks: ['compactando-imagens'],
                 options: {
                     event: ['added', 'changed']
@@ -119,9 +120,9 @@ module.exports = function(grunt){
             dynamic: {
                 files: [{
                     expand: true,
-                    cwd: 'src/www/current/images',
+                    cwd: 'src/images',
                     src: ['**/*.{png,jpg,gif,svg'],
-                    dest: 'dist/www/images'
+                    dest: 'dist/images'
                 }]
             }
         }
@@ -129,11 +130,14 @@ module.exports = function(grunt){
     });
 
     // Carregando os plug-ins
-    grunt.loadNpmTasks('gurnt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt-loadNpmTasks('grunt-contrib-watch');
-    grunt-loadNpmTasks('grunt-image');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-image');
+
+    // Tarefas de copias
+    grunt.registerTask('copiando-base', ['copy:base']);
 }
