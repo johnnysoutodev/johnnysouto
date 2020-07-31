@@ -12,8 +12,8 @@ module.exports = function(grunt){
                 src: ['.tmp/**/*']
             },
 
-            html: {
-                src: ['dist/www/*.html']
+            base: {
+                src: ['dist/www/*.html','dist/www/*.htm','dist/www/*.txt']
             },
 
             imagesTmp: {
