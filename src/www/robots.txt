@@ -2,7 +2,7 @@
 User-agent: Googlebot
 Allow: /nogooglebot/
 
-# Group 2
+# For Others
 User-agent: *
 Disallow: /
 
