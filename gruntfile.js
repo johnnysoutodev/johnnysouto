@@ -40,11 +40,9 @@ module.exports = function(grunt){
         copy: {
             base: {
                 expand: false,
-                flatten: true,
-                path: 'src',
-                src: 'src/**',
-                dest: 'dist/',
-                filter: 'isFile',
+                cwd: 'src',
+                src: '*.{html,txt}',
+                dest: 'dist/'
             },
 
             css: {
