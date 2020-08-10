@@ -1,108 +1,77 @@
 module.exports = function(grunt){
 
-    // Config
     grunt.initConfig({
 
         clean: {
-            dist:{
-                src: ['dist/**/*']
-            },
 
             tmp: {
                 src: ['.tmp/**/*']
             },
 
-            base: {
-                src: ['dist/*.html','dist/*.txt']
-            },
-
-            imagesTmp: {
-                src: ['.tmp/images/**/*']
+            public: {
+                src: ['public/**/*']
             },
 
             images: {
-                src: ['dist/images/**/*']
-            }
-        },
+                src: ['.tmp/images/**/*']
+            },
 
-        concat: {
             js: {
-                src: ['src/current/js/jquery.js', 'src/current/js/main.js'],
-                dest: 'dist/js/scripts.min.js'
+                src: ['.tmp/js/**/*']
             },
 
             css: {
-                src: ['src/www/current/css/*.css'],
-                dest: '.tmp/css/styles.min.css'
+                src: ['.tmp/css/**/*']
             }
+
         },
 
         copy: {
-            base: {
-                expand: false,
+            html: {
+                expand: true,
                 cwd: 'src',
-                src: '*.{html,txt}',
-                dest: 'dist/'
+                src: ['*'],
+                dest: 'public',
+                filter: 'isFile'
             },
 
-            css: {
+            css:{
                 expand: false,
                 src: '.tmp/css/styles.min.css',
-                dest: 'dist/css/styles.min.css'
+                dest: 'public/css/styles.min.css'
             },
 
             js: {
-                expande: false,
-                src: './tmp/js/scripts.min.js',
-                dest: 'dist/js/scripts.min.js'
+                expand: false,
+                src: '.tmp/js/scripts.min.js',
+                dest: 'public/js/scripts.min.js'
             },
 
             images: {
                 expand: true,
                 cwd: '.tmp/images',
                 src: '*.{png,jpg,gif,svg}',
-                dest: 'dist/images/'
+                dest: 'public/images/'
+            }
+        },
+
+        concat: {
+
+            js: {
+                src: ['src/js/**/*'],
+                dest: '.tmp/js/scripts.min.js'
+            },
+
+            css: {
+                src: ['src/css/reset.css', 'src/css/global.css', 'src/css/index.css', 'src/css/produtos.css', 'src/css/contato.css', 'src/css/mediaqueries.css'],
+                dest: '.tmp/css/styles.min.css'
             }
         },
 
         cssmin: {
             css: {
                 files: {
-                    '.tmp/css/styles.min.css': '.tmp/css/css/styles.min.css'
-                }
-            }
-        },
-
-        watch: {
-            scripts: {
-                files: 'src/js/*.js',
-                tasks: ['codificando'],
-                options: {
-                    event: ['added', 'ghanged']
-                }
-            },
-
-            styles: {
-                files: 'src/css/*.css',
-                tasks: ['estilizando'],
-                options: {
-                    event: ['added', 'changed']
-                }
-            },
-
-            html: {
-                files: 'src/*.html',
-                tasks: ['copy:html'],
-                options: {
-                    event: ['added', 'changed']
-                }
-            },
-
-            images: {
-                files: 'src/images/*.{png,jpg,gif,svg}',
-                tasks: ['compactando-imagens'],
-                options: {
-                    event: ['added', 'changed']
+                    '.tmp/css/styles.min.css': '.tmp/css/styles.min.css'
                 }
             }
         },
@@ -117,27 +86,75 @@ module.exports = function(grunt){
         },
 
         image: {
+            
             dynamic: {
                 files: [{
                     expand: true,
-                    cwd: 'src/images',
-                    src: ['**/*.{png,jpg,gif,svg'],
-                    dest: 'dist/images'
+                    cwd: 'src/images/',
+                    src: ['**/*.{png,jpg,gif,svg}'],
+                    dest: '.tmp/images/'
                 }]
+            }
+        },
+
+        watch: {
+            scripts: {
+                files: 'src/js/*.js',
+                tasks: ['codificando'],
+                options: {
+                    event: ['added', 'changed', 'deleted'],
+                }
+            },
+
+            styles: {
+                files: 'src/css/*.css',
+                tasks: ['estilizando'],
+                options: {
+                    event: ['added', 'changed', 'deleted'],
+                }
+            },
+
+            html: {
+                files: 'src/*.html',
+                tasks: ['copy:html'],
+                options: {
+                    event: ['added', 'changed', 'deleted'],
+                }
+            },
+
+            images: {
+                files: 'src/images/*.{png,jpg,gif,svg}',
+                tasks: ['compactando-images'],
+                options: {
+                    event: ['added', 'changed', 'deleted']
+                }
             }
         }
 
     });
 
-    // Carregando os plug-ins
+    // Load plugins
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-image');
 
-    // Tarefas de copias
-    grunt.registerTask('copiando-base', ['copy:base']);
-}
+    // Tarefas para limpeza
+    grunt.registerTask('limpar-tmp', ['clean:tmp']);
+    grunt.registerTask('limpar-public', ['clean:public']);
+    grunt.registerTask('limpar-images', ['clean:images']);
+    grunt.registerTask('limpar-tudo', ['limpar-public', 'limpar-tmp']);
+
+    // Tarafa de compactação de imagens
+    grunt.registerTask('compactando-images', ['clean:images', 'image:dynamic', 'copy:images']);
+
+    // Tarefas para trabalhar no projeto
+    grunt.registerTask('codificando', ['concat:js','uglify', 'copy:js']);
+    grunt.registerTask('estilizando', ['concat:css','cssmin', 'copy:css']);
+    grunt.registerTask('default', ['watch']);
+    grunt.registerTask('publicando-projeto', ['limpar-tudo','compactando-images','codificando','estilizando','copy:html']);
+};
