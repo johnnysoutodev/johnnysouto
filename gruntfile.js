@@ -114,9 +114,9 @@ module.exports = function(grunt){
                 }
             },
 
-            html: {
-                files: 'src/*.html',
-                tasks: ['copy:html'],
+            files: {
+                files: 'src/*.{html,txt}',
+                tasks: ['copy:files'],
                 options: {
                     event: ['added', 'changed', 'deleted'],
                 }
