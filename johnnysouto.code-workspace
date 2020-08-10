@@ -5,8 +5,10 @@
 		}
 	],
 	"settings": {
-		"liveServer.settings.CustomBrowser": "chrome",
-		"liveServer.settings.root": "/dist/www",
-		"liveServer.settings.fullReload": true
+		"liveServer.settings.CustomBrowser": "chrome:PrivateMode",
+		"liveServer.settings.root": "/public/",
+		"liveServer.settings.fullReload": true,
+		"liveServer.settings.port": 80,
+		"liveServer.settings.host": "localhost"
 	}
 }
