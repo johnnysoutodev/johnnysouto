@@ -1,0 +1,9 @@
+# For Google
+User-agent: Googlebot
+Allow: /nogooglebot/
+
+# For Others
+User-agent: *
+Disallow: /
+
+# Exemplo for Sitemap: http://www.example.com/sitemap.xml
