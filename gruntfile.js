@@ -27,7 +27,7 @@ module.exports = function(grunt){
         },
 
         copy: {
-            html: {
+            files: {
                 expand: true,
                 cwd: 'src',
                 src: ['*'],
