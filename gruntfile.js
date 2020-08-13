@@ -63,7 +63,7 @@ module.exports = function(grunt){
             },
 
             css: {
-                src: ['src/css/reset.css', 'src/css/global.css', 'src/css/index.css', 'src/css/produtos.css', 'src/css/contato.css', 'src/css/mediaqueries.css'],
+                src: ['src/css/reset.css', 'src/css/main.css', 'src/css/*.css'],
                 dest: '.tmp/css/styles.min.css'
             }
         },
