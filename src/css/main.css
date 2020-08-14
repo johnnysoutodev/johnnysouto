@@ -52,10 +52,13 @@ nav h1:after {
     margin: 0.3em;
     border: 1px solid transparent;
     box-shadow: 3px 3px 3px #989898;
+}
+
+.card-effect {
     transition: 0.3s ease-in;
 }
 
-.card:hover {
+.card-effect:hover {
     box-shadow: 13px 13px 13px #989898;
     border-radius: 0.2em;
 }
@@ -92,7 +95,7 @@ footer {
 }
 
 footer p {
-    font-size: 0.8em;
+    font-size: 0.7em;
 }
 
 footer p:last-child {
