@@ -52,6 +52,30 @@ module.exports = function(grunt){
                 cwd: '.tmp/images',
                 src: '*.{png,jpg,gif,svg}',
                 dest: 'public/images/'
+            },
+
+            bootstrapCss: {
+                expand: false,
+                src: 'node_modules/bootstrap/dist/css/bootstrap.css',
+                dest: 'src/css/bootstrap.css'
+            },
+
+            bootstrapJs: {
+                expand: false,
+                src: 'node_modules/bootstrap/dist/js/bootstrap.js',
+                dest: 'src/js/bootstrap.js'
+            },
+
+            jquery: {
+                expand: false,
+                src: 'node_modules/jquery/dist/jquery.js',
+                dest: 'src/js/jquery.js'
+            },
+
+            popper: {
+                expand: false,
+                src: 'node_modules/popper.js/dist/popper.js',
+                dest: 'src/js/popper.js'
             }
         },
 
@@ -153,6 +177,7 @@ module.exports = function(grunt){
     grunt.registerTask('compactando-images', ['clean:images', 'image:dynamic', 'copy:images']);
 
     // Tarefas para trabalhar no projeto
+    grunt.registerTask('iniciando', ['copy:bootstrapJs','copy:bootstrapCss','uglify', 'copy:js']);
     grunt.registerTask('codificando', ['concat:js','uglify', 'copy:js']);
     grunt.registerTask('estilizando', ['concat:css','cssmin', 'copy:css']);
     grunt.registerTask('default', ['watch']);
