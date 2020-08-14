@@ -29,7 +29,7 @@ nav h1 {
 }
 
 nav h1:after {
-    /* content: ' | JS Developer'; */
+    content: '';
 }
 
 a{
