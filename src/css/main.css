@@ -1,5 +1,10 @@
 /* main.css */
 
+:root {
+    --color-menu-primary: rgba(13, 110, 139, 0.75);
+    --colo-menu-bg: rbga(24, 39, 51, .85);
+}
+
 * {
     margin: 0;
     padding: 0;
