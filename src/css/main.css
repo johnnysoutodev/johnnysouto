@@ -4,6 +4,7 @@
     --color-menu-primary: rgba(13, 110, 139, 0.75);
     --colo-menu-bg: rbga(24, 39, 51, .85);
     --color-white: #fff;
+    --color-dark: #000;
     --menu-speed: 2s;
 }
 
@@ -93,6 +94,87 @@ header h1:after {
 
 .head {
     padding: 1em;
+}
+
+nav {
+    min-height: 3em;
+}
+
+/* Menu */
+
+.menu {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    /* top: 0; */
+    /* left: 0; */
+    background-color: lightblue;
+    cursor: pointer;
+}
+
+.menu span > div {
+    width: 100%;
+    background-color: blue;
+    transition: width 2s ease;
+    z-index: 1;
+}
+
+.hamburger {
+    position: relative;
+    display: block;
+    background-color: var(--color-dark);
+    width: 25px;
+    height: 3px;
+    top: 25px;
+    left: 5px;
+    transition: all .5s ease;
+    z-index: 2;
+}
+
+.hamburger:before, .hamburger:after {
+    position: absolute;
+    content: '';
+    display: block;
+    height: 100%;
+    background-color: var(--color-dark);
+    transition: all .5s ease;
+}
+
+.hamburger:before {
+    top: -10px;
+    width: 40px;
+}
+
+.hamburger:after {
+    bottom: -10px;
+    width: 40px;
+}
+
+header h1 {
+    margin-left: 60px;
+}
+
+input {
+    display: none;
+}
+
+input:checked ~ label .hamburger {
+    transform: rotate(45deg);
+    width: 40px;
+}
+
+input:checked ~ label .hamburger:before {
+    transform: rotate(90deg);
+    top: 0;
+}
+
+input:checked ~ label .hamburger:after {
+    transform: rotate(90deg);
+    bottom: 0px;
+}
+
+input:checked ~ label .menu > div{
+    width: 100%;
 }
 
 /* Footer */
