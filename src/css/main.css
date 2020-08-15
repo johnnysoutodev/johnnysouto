@@ -3,6 +3,7 @@
 :root {
     --color-menu-primary: rgba(13, 110, 139, 0.75);
     --colo-menu-bg: rbga(24, 39, 51, .85);
+    --color-white: #fff;
     --menu-speed: 0.75s;
 }
 
@@ -113,7 +114,48 @@ header h1:after {
 }
 
 .menu-wrap .hamburger {
-    
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    padding: 1rem;
+    background-color: var(--color-menu-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hamburger line */
+
+.menu-wrap .hamburger > div {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Top and Down lines */
+
+.menu-wrap .hamburger > div:before,
+.menu-wrap .hamburger > div:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+    background-color: inherit;
+}
+
+/* Moves line down */
+
+.menu-wrap .hamburger > div:after {
+    top: 10px;
 }
 
 /* Footer */
