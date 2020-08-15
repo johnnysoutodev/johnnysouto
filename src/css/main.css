@@ -137,6 +137,7 @@ header h1:after {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.4s ease;
 }
 
 /* Top and Down lines */
@@ -156,6 +157,20 @@ header h1:after {
 
 .menu-wrap .hamburger > div:after {
     top: 10px;
+}
+
+/* Toggler animate */
+
+.menu-wrap .toggler:checked + .hamburger > div {
+    transform: rotate(135deg);
+}
+
+/* Turn lines into X */
+
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after {
+    top: 0;
+    transform: rotate(90deg);
 }
 
 /* Footer */
