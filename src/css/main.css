@@ -25,7 +25,7 @@ nav {
     cursor: unset;
 }
 
-.menu, .foot {
+.menu {
     padding: 1em;
 }
 
@@ -92,6 +92,8 @@ footer {
     position: absolute;
     bottom: 0;
     left: 0;
+    background-color: #000;
+    color: #fff;
 }
 
 footer p {
@@ -102,3 +104,9 @@ footer p:last-child {
     font-size: 0.5em;
 }
 
+.foot {
+    width: 90%;
+    padding: 1em 0;
+    text-align: left;
+    margin: 0 auto;
+}
