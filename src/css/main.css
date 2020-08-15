@@ -101,8 +101,19 @@ header h1:after {
     z-index: 1;
 }
 
-.menu .toggler {
+.menu-wrap .toggler {
     position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+}
+
+.menu-wrap .hamburger {
+    
 }
 
 /* Footer */
