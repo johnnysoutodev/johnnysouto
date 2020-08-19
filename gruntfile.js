@@ -87,7 +87,7 @@ module.exports = function(grunt){
             },
 
             css: {
-                src: ['src/css/reset.css', 'src/css/main.css', 'src/css/*.css'],
+                src: ['src/css/reset.css', 'src/css/main.css', 'src/css/**/*.css'],
                 dest: '.tmp/css/styles.min.css'
             }
         },
