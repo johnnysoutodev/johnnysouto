@@ -235,3 +235,10 @@ body {
 i {
     font-size: 32px;
 }
+
+.rodape {
+    position: fixed;
+    left: 5px;
+    bottom: 5px;
+    font-size: .8em;
+}
