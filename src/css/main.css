@@ -214,6 +214,16 @@ footer p:last-child {
 
 */
 
+body {
+    background-color: #f1f1f1;
+    font-size: 20px;
+}
+
+.tamanho {
+    width: 250px;
+    height: 250px;
+}
+
 .centralizado {
     position: absolute;
     top: 50%;
