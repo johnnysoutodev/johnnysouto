@@ -10,6 +10,10 @@
         margin-top: -100px;
         margin-left: -100px;
     }
+
+    .rodape {
+        font-size: 10px;
+    }
 }
 
 @media (min-width: 375px) {
