@@ -275,6 +275,7 @@ i {
 
 .btn-secondary {
     background-color: #359BFF !important;
+    border-radius: 0 !important;
 }
 
 .btn-secondary:hover {
