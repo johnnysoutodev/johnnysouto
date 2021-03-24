@@ -216,7 +216,7 @@ footer p:last-child {
 
 body {
     background-color: #f1f1f1;
-    font-size: 20px;
+    font-size: 16px;
     color: #1C1C1C;
 }
 
@@ -246,4 +246,46 @@ i {
     left: 5px;
     bottom: 5px;
     font-size: .7em;
+}
+
+#alertCookie {
+    display: block;
+}
+
+#alertCookie.hide {
+    display: none;
+}
+
+.box-cookie {
+    position: fixed;
+    z-index: 998;
+    bottom: 0;
+    width: 98.5%;
+    background: rgba(28, 28, 28, .95);
+    color: #f1f1f1;
+    margin: 0.75%;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.btn-secondary {
+    transition: all ease .5s;
+}
+
+.btn-secondary {
+    background-color: #359BFF !important;
+}
+
+.btn-secondary:hover {
+    background-color: #0876E1 !important;
+}
+
+.cookie-text {
+    font-size: .6em;
+    margin: .3em;
+    margin-right: 1em;
+    padding: .2em;
+    text-align: justify;
+    box-sizing: border-box;
 }
