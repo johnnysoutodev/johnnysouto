@@ -9,13 +9,11 @@ var exdays = 7;
 var btnCookie = document.querySelector('#btn-cookie');
 
 function acceptCookie() {
-    console.log("Check");
+
     btnCookie.addEventListener('click', btnClicked);
     if (document.cookie == "") {
-        console.log("Cookie not exist");
-        setCookie();
+        showCookieAlert();
     } else {
-        console.log("Cookie exist");
         hideCookieAlert();
     }
 }
@@ -31,8 +29,8 @@ function showCookieAlert(){
 }
 
 function btnClicked(){
-    console.log("Clicked");
     hideCookieAlert();
+    setCookie();
 }
 
 function setCookie(){
