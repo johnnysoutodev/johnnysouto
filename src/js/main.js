@@ -2,21 +2,14 @@
 
 var year = new Date().getFullYear();
 
-var cookie = "";
+var cookie;
 var cname = "acceptCookie";
 var cvalue = "yes";
 var exdays = 7;
+var decodedCookie = decodeURIComponent(document.cookie);
 var btnCookie = document.querySelector('#btn-cookie');
 
-function acceptCookie() {
-
-    btnCookie.addEventListener('click', btnClicked);
-    if (document.cookie == "") {
-        showCookieAlert();
-    } else {
-        hideCookieAlert();
-    }
-}
+btnCookie.addEventListener('click', btnClicked);
 
 function hideCookieAlert(){
     var element = document.getElementById("alertCookie");
@@ -40,4 +33,19 @@ function setCookie(){
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
-acceptCookie();
+function checkCookie(){
+    cookie = cname + "=" + cvalue;
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+        }
+        if (c.indexOf(cookie) == 0) {
+        return hideCookieAlert();
+        }
+    }
+    return showCookieAlert();
+}
+
+checkCookie();
