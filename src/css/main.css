@@ -220,6 +220,15 @@ body {
     color: #1C1C1C;
 }
 
+.teste {
+    background: url(../images/bg_jsdeveloper.png);
+    filter: grayscale(100%);
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    z-index: -9999;
+}
+
 .tamanho {
     width: 250px;
     height: 250px;
