@@ -218,10 +218,10 @@ body {
     background-color: #f1f1f1;
     font-size: 16px;
     color: #1C1C1C;
+    background: url(../images/bg_jsdeveloper.png);
 }
 
 .teste {
-    background: url(../images/bg_jsdeveloper.png);
     filter: grayscale(100%);
     overflow: hidden;
     width: 100vw;
@@ -259,7 +259,6 @@ i {
 
 .rodape {
     position: fixed;
-    left: 5px;
     bottom: 5px;
     font-size: .6em;
 }
