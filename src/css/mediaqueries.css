@@ -2,25 +2,25 @@
 
 @media (max-width: 374px) {
     .tamanho {
-        width: 200px;
-        height: 200px;
+        width: 12.5em;
+        height: 12.5em;
     }
     
     .centralizado {
-        margin-top: -100px;
-        margin-left: -100px;
+        margin-top: -6.5em;
+        margin-left: -6.5em;
     }
 
 }
 
 @media (min-width: 375px) {
     .tamanho {
-        width: 250px;
-        height: 250px;
+        width: 16em;
+        height: 16em;
     }
     
     .centralizado {
-        margin-top: -125px;
-        margin-left: -125px;
+        margin-top: -8em;
+        margin-left: -8em;
     }
 }
