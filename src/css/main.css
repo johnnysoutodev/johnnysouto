@@ -216,6 +216,7 @@ footer p:last-child {
 
 body {
     background-color: #f1f1f1;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     color: #1C1C1C;
     background-image: url(../images/bg_jsdeveloper.png);
@@ -248,6 +249,10 @@ body {
 
 .sombra {
     box-shadow: 5px 5px 5px rgba(0,0,0, .5);
+}
+
+a {
+    cursor: pointer;
 }
 
 i {
