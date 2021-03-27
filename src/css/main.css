@@ -309,3 +309,26 @@ i {
     text-align: justify;
     box-sizing: border-box;
 }
+
+.band {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    text-transform: uppercase;
+    text-align: center;
+    overflow: hidden;
+}
+
+.text-band{
+    position: absolute;
+    text-align: center;
+    background-color: rgb(235, 0, 0);
+    color: #f1f1f1;
+    transform: rotate(-45deg);
+    padding: 10px;
+    top: 40px;
+    left: -100px;
+    overflow: hidden;
+    width: 300px;
+    z-index: 9999;
+}
