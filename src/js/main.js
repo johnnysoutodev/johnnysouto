@@ -5,7 +5,7 @@ var year = new Date().getFullYear();
 var cookie;
 var cname = "acceptCookie";
 var cvalue = "yes";
-var exdays = 7;
+var exdays = 30;
 var decodedCookie = decodeURIComponent(document.cookie);
 var btnCookie = document.querySelector('#btn-cookie');
 
