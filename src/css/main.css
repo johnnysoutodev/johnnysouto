@@ -310,14 +310,14 @@ i {
     box-sizing: border-box;
 }
 
-/* .band {
-    /* position: relative;
-    width: 15em;
-    height: 15em;
+.band {
+    position: relative;
+    width: 16em;
+    height: 16em;
     text-transform: uppercase;
     text-align: center;
     overflow: hidden;
-} */
+}
 
 .text-band{
     position: absolute;
@@ -330,8 +330,8 @@ i {
     transform: rotate(-45deg);
     padding: 10px;
     top: 40px;
-    left: -100px;
+    left: -6em;
     overflow: hidden;
-    width: 300px;
+    width: 19em;
     z-index: 9999;
-} */
+}
