@@ -233,12 +233,6 @@ body {
 .tamanho {
     width: 250px;
     height: 250px;
-    transition: all ease .2s;
-}
-
-.tamanho:hover {
-    width: 265px;
-    height: 265px;
 }
 
 .centralizado {
