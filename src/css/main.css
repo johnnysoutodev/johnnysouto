@@ -256,7 +256,7 @@ a {
 }
 
 i {
-    font-size: 32px;
+    font-size: 2em;
 }
 
 .rodape {
@@ -310,18 +310,21 @@ i {
     box-sizing: border-box;
 }
 
-.band {
-    position: relative;
-    width: 250px;
-    height: 250px;
+/* .band {
+    /* position: relative;
+    width: 15em;
+    height: 15em;
     text-transform: uppercase;
     text-align: center;
     overflow: hidden;
-}
+} */
 
 .text-band{
     position: absolute;
     text-align: center;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 700;
     background-color: rgb(235, 0, 0);
     color: #f1f1f1;
     transform: rotate(-45deg);
@@ -331,4 +334,4 @@ i {
     overflow: hidden;
     width: 300px;
     z-index: 9999;
-}
+} */
