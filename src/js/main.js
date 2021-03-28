@@ -38,7 +38,7 @@ function acceptCookie(){
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
     var expires = "expires=" + d.toGMTString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-    activeGA();
+    acceptGA();
 }
 
 function refuseCookie(){
@@ -47,6 +47,7 @@ function refuseCookie(){
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
     var expires = "expires=" + d.toGMTString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    refuseGA();
 }
 
 function checkCookie(){
