@@ -7,7 +7,7 @@ function refuseGA(){
 }
 
 function acceptGA() {
-    var exdays = 30;
+    var exdays = 90;
     window['ga-disable-G-05QDHZNLE0'] = false;
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
