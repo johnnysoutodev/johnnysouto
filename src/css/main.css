@@ -83,16 +83,13 @@ i {
     box-sizing: border-box;
 }
 
-.btn-secondary {
-    transition: all ease .5s;
-}
-
-.btn-secondary {
+.btn-primary {
+    text-transform: uppercase;
     background-color: #359BFF !important;
     border-radius: 0 !important;
 }
 
-.btn-secondary:hover {
+.btn-primary:hover {
     background-color: #0876E1 !important;
 }
 
