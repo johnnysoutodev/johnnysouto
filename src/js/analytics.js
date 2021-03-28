@@ -2,8 +2,13 @@
 
 // Google Analytics
 
+function refuseGA(){
+    window['ga-disable-G-05QDHZNLE0'] = true;
+}
 
-function activeGA() {
+
+function acceptGA() {
+    window['ga-disable-G-05QDHZNLE0'] = false;
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
