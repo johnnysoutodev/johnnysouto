@@ -82,7 +82,7 @@ module.exports = function(grunt){
         concat: {
 
             js: {
-                src: ['src/js/jquery.js', 'src/js/popper.js', 'src/js/bootstrap.js', 'src/js/**/*.js'],
+                src: ['src/js/jquery.js', 'src/js/popper.js', 'src/js/bootstrap.js', 'src/js/analytics', 'src/js/**/*.js'],
                 dest: '.tmp/js/scripts.min.js'
             },
 
