@@ -9,5 +9,3 @@ function activeGA() {
 
     gtag('config', 'G-05QDHZNLE0');
 }
-
-// Teste
