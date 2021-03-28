@@ -5,11 +5,12 @@ var year = new Date().getFullYear();
 var cookie;
 var cname = "acceptCookie";
 var cvalue = "yes";
-var exdays = 730;
 var decodedCookie = decodeURIComponent(document.cookie);
-var btnCookie = document.querySelector('#btn-cookie');
+var btnAcceptCookie = document.querySelector('#btn-accept-cookie');
+var btnRefuseCookie = document.querySelector('#btn-refuse-cookie');
 
-btnCookie.addEventListener('click', btnClicked);
+btnAcceptCookie.addEventListener('click', btnAcceptClicked);
+btnRefuseCookie.addEventListener('click', btnRefuseClicked);
 
 function hideCookieAlert(){
     var element = document.getElementById("alertCookie");
@@ -21,17 +22,31 @@ function showCookieAlert(){
     element.classList.remove("hide");
 }
 
-function btnClicked(){
+function btnAcceptClicked(){
     hideCookieAlert();
-    setCookie();
+    acceptCookie();
 }
 
-function setCookie(){
+function btnRefuseClicked(){
+    hideCookieAlert();
+    refuseCookie();
+}
+
+function acceptCookie(){
+    var exdays = 730;
     var d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
     var expires = "expires=" + d.toGMTString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
     activeGA();
+}
+
+function refuseCookie(){
+    var exdays = 0;
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
 function checkCookie(){
