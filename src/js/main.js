@@ -33,7 +33,7 @@ function btnRefuseClicked(){
 }
 
 function acceptCookie(){
-    var exdays = 30;
+    var exdays = 90;
     var d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
     var expires = "expires=" + d.toGMTString();
@@ -53,7 +53,6 @@ function refuseCookie(){
 function checkCookie(){
     cookie = cname + "=" + cvalue;
     var ca = decodedCookie.split(';');
-    console.log(ca);
     for(var i = 0; i < ca.length; i++) {
         var c = ca[i];
         while (c.charAt(0) == ' ') {
